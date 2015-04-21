@@ -8,6 +8,7 @@ use App\Student;
 use App\Countries;
 use \App\Batch;
 use DB;
+
 class StudentController extends Controller {
 
         protected $layout = 'layouts.master';
@@ -44,6 +45,7 @@ class StudentController extends Controller {
         {
             $batch_id=Request::input('batch_id');
             $students=Student::all()->where('batch_id', $batch_id);
+            var_dump($students); 
         }
         
          

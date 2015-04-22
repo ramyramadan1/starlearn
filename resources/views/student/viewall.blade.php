@@ -4,12 +4,15 @@
     <div class="label-field-pair-select-class">
     <label for="student-detail-select-class">Select a batch </label>
     <div class="text-input-bg">
+        {!! Form::open(array('url' => 'foo/bar')); !!}
         <select id="course_id" name="course_id" >
             <option value="">Select a batch</option>
             @foreach($batches as $batch)
-            <option value="{{ $batch->id }}">{{ $batch->name}}</option>
+            <option value="{{ $batch->id }}">{{ $batch->course_name}}</option>
             @endforeach
-        </select></div>
+        </select>
+    {!! Form::close(); !!}
+    </div>
   </div>
 
     
@@ -21,10 +24,9 @@
 $(document).ready(function(){
    $('#course_id').on('change',function(){
        $.ajax({url:'<?php echo url('student/getstudentsonbatch'); ?>',
-           type:'POST',data:(this).closest('form').serialize(),success:function(){
-       
-   }    
-   }); 
+           type:'POST',data:$(this).closest('form').serialize(),success:function(){
+            }    
+        }); 
    });
     
 });

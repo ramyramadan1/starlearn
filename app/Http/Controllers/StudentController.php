@@ -2,16 +2,27 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use Request;
 use App\Student;
 use App\Countries;
-use \App\Batch;
+use App\Batch;
 use DB;
 
 class StudentController extends Controller {
 
         protected $layout = 'layouts.master';
+        
+        
+         /**
+	 * Create a new controller instance.
+	 *
+	 * @return void
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+        
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -28,7 +39,8 @@ class StudentController extends Controller {
         {
             
             $students=Student::all();
-            $batches = DB::table('batches')->where('is_deleted',0)->groupby('name')->orderBy('id','asc')->get();
+            $batches = DB::table('courses')->get();
+            
             //$batches=  Batch::all()->groupBy('course_id')->get();
 
             return view('student/viewall',array('students'=>$students,'content'=>'this is content','batches'=>$batches));
@@ -43,8 +55,9 @@ class StudentController extends Controller {
         public function get_student_on_batchid()
                 
         {
-            $batch_id=Request::input('batch_id');
-            $students=Student::all()->where('batch_id', $batch_id);
+            $course_id=Request::input('course_id');
+            $batches=Batch::where('course_id',$course_id)->get();
+            $students=Student::all()->where('batch_id', $batches);
             var_dump($students); 
         }
         

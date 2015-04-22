@@ -24,7 +24,7 @@ class DashboardController extends Controller {
 	 */
 	public function __construct()
 	{
-		$this->middleware('guest');
+		$this->middleware('auth');
 	}
 
 	/**
@@ -34,7 +34,7 @@ class DashboardController extends Controller {
 	 */
 	public function dashboard()
 	{
-		return view('Admin/dashboard');
+		return view('Admin/dashboard/dashboard');
 	}
 	
 	

@@ -41,7 +41,9 @@
 
 <!--        <link href="/assets/plugins/kendo/content/shared/styles/examples-offline.css" rel="stylesheet">
         <script src="/assets/plugins/kendo/content/js/kendo.all.min.js"></script>-->
-
+ @section('head')
+            
+        @show
 </head>
     <body>
         @section('sidebar')

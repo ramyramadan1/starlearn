@@ -143,7 +143,8 @@ return [
 		'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
-		'App\Providers\RouteServiceProvider',
+		'App\Providers\RouteServiceProvider','Illuminate\Html\HtmlServiceProvider','Barryvdh\Debugbar\ServiceProvider','Way\Generators\GeneratorsServiceProvider',
+'Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider',
 
 	],
 
@@ -192,6 +193,8 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+                'Html' => 'Illuminate\Html\HtmlFacade',
+                'Form' => 'Illuminate\Html\FormFacade',
 
 	],
 

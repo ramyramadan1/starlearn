@@ -26,13 +26,25 @@
         <ul class="sidebar-menu">
             <li class="header">MENU</li>
             <li class="active treeview">
-                <a href="#">
+                <a href="{{URL::to('admin/dashboard')}}">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
                     <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Student Admission</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Employee Admission</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> HR Managment</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Finance</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> News Managment</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Time Table</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Settings</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Attendance</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Examination</a></li>
                 </ul>
+            </li>
+            <li class="active treeview">
+                <a href="{{URL::to('admin/students')}}">
+                <i class="glyphicon glyphicon-user"></i> <span>Students</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                
             </li>
         </ul>
 

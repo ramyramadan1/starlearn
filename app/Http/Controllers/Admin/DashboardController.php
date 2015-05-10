@@ -8,7 +8,7 @@ class DashboardController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
-	| Admin Controller
+	| DashboardController
 	|--------------------------------------------------------------------------
 	|
 	| This controller renders your application's "dashboard" for users that

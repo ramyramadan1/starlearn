@@ -121,6 +121,7 @@ return [
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
         'Barryvdh\Debugbar\ServiceProvider',
+        'yajra\Datatables\DatatablesServiceProvider',
         /*
          * Application Service Providers...
          */
@@ -174,6 +175,6 @@ return [
         'URL' => 'Illuminate\Support\Facades\URL',
         'Validator' => 'Illuminate\Support\Facades\Validator',
         'View' => 'Illuminate\Support\Facades\View',
+        'Datatables' => 'yajra\Datatables\Datatables',
     ],
-
 ];

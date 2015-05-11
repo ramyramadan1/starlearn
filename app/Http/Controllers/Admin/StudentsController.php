@@ -86,15 +86,6 @@ class StudentsController extends Controller {
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /**
      * return json object with all students .
      *

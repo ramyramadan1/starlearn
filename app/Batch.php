@@ -10,5 +10,15 @@ class Batch extends Model {
         $batches = DB::table('batches')->groupby('course_id')->get();
         return $batches;
     }
+    
+     public function student()
+    {
+        return $this->belongsTo('App\Student','batch_id','id');
+    }
+    
+        public function course()
+    {
+        return $this->hasOne('App\Course','id','course_id');
+    }
 
 }

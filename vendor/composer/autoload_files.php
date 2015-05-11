@@ -12,7 +12,8 @@ return array(
     $vendorDir . '/ircmaxell/password-compat/lib/password.php',
     $vendorDir . '/psy/psysh/src/Psy/functions.php',
     $vendorDir . '/danielstjules/stringy/src/Create.php',
+    $vendorDir . '/barryvdh/laravel-debugbar/src/helpers.php',
     $vendorDir . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
     $vendorDir . '/laravel/framework/src/Illuminate/Support/helpers.php',
-    $vendorDir . '/barryvdh/laravel-debugbar/src/helpers.php',
+    $vendorDir . '/illuminate/html/helpers.php',
 );

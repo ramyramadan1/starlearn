@@ -1,10 +1,7 @@
-@extends('layouts.master')
-
-@section('sidebar')
-   
-@stop
+@extends('app')
 
 @section('content')
+
 <div id="page-yield">
   <div id="search_box_bg">
     <form name="search_form" action="" style="display:inline;">
@@ -32,4 +29,4 @@
   <div id="information"></div>
 
 </div>
-@stop
+@endsection

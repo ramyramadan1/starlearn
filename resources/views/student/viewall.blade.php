@@ -1,7 +1,7 @@
-@extends('layouts.master')
+@extends('app')
 
-@section('sidebar')
-    <div class="label-field-pair-select-class">
+@section('content')
+<div class="label-field-pair-select-class">
     <label for="student-detail-select-class">Select a batch </label>
     <div class="text-input-bg">
         {!! Form::open(array('url' => 'foo/bar')); !!}
@@ -14,11 +14,6 @@
     {!! Form::close(); !!}
     </div>
   </div>
-
-    
-@stop
-
-@section('content')
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -35,7 +30,7 @@ $(document).ready(function(){
     <thead>  <tr>
                         <th>SL no</th>
                         <th>name</th>
-                        <th>User Name</th>
+                        <th>Admission No</th>
                         <th></th>
                       </tr>
                     </thead>
@@ -45,8 +40,9 @@ $(document).ready(function(){
         <td>{{ $student->first_name }}
         {{ $student->middle_name }}
         {{ $student->last_name }}</td>
-        <td>{{ $student->date_of_birth }}</td>
+        <td>{{ $student->admission_no }}</td>
+        <td><a href="/student/profile/{{ $student->id }}">View Profile</a></td>
     <tr>
     @endforeach
 </table>
-@stop
+@endsection
